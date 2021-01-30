@@ -18,4 +18,8 @@ route.get('/checkById/:newsId', (req, res) => {
     res.json(news)
 })
 
+route.get('/news', (req, res) => {
+       res.render('news')
+       })
+
 module.exports = route
