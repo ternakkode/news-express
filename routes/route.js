@@ -4,6 +4,12 @@ const models = {
     news: require('../models/news')
 }
 
+let totalViews = 0
+router.use(function (req, res, next) {
+    totalViews++
+    next()
+})
+
 /*
     contoh penggunaan model news
     1. route /checkAll untuk mengambil semua data
@@ -19,7 +25,7 @@ route.get('/checkById/:newsId', (req, res) => {
 })
 
 route.get('/news', (req, res) => {
-       res.render('news')
-       })
+    res.render('news')
+})
 
 module.exports = route
