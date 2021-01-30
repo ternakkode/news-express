@@ -1,16 +1,8 @@
-const faker  = require('faker')
-const news = require('./data.json')
+const data = require('./seeder')
 
-const generateNews = (news) => {
-    return news.map(data => {
-        data.content = faker.lorem.paragraphs(4, '\n\n')
-        return data
-    })
+const model = {
+    fetchAll: () => data,
+    fetchById: (id) => data.find((news) => news.id == id)
 }
 
-let newsWithContent = generateNews(news)
-
-const fetchAll = () => newsWithContent
-const fetchById = (id) => newsWithContent.find((data) => data.id == id)
-
-module.exports = {fetchAll, fetchById}
+module.exports = model
