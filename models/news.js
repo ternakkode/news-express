@@ -1,0 +1,1 @@
+// TODO Bikin Model datanya untuk 3 artikel menggunakan faker
