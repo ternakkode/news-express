@@ -1,1 +1,8 @@
-// TODO Bikin Model datanya untuk 3 artikel menggunakan faker
+const data = require('./seeder')
+
+const model = {
+    fetchAll: () => data,
+    fetchById: (id) => data.find((news) => news.id == id)
+}
+
+module.exports = model
