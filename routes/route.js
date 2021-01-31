@@ -5,7 +5,7 @@ const models = {
 }
 
 let totalViews = 0
-router.use(function (req, res, next) {
+route.use(function (req, res, next) {
     totalViews++
     next()
 })
@@ -24,8 +24,22 @@ route.get('/checkById/:newsId', (req, res) => {
     res.json(news)
 })
 
-route.get('/news', (req, res) => {
-    res.render('news')
+route.get('/', (req, res) => {
+    const news = models.news.fetchAll()
+    res.render('home', { news: news })
+})
+
+route.get('/news/:newsId', (req, res) => {
+    const news = models.news.fetchById(req.params.newsId) ?? {}
+    res.render('news', { news: news })
+})
+
+route.get('/about', (req, res) => {
+    res.render('about')
+})
+
+route.get('/*', (req, res) => {
+    res.render('404')
 })
 
 module.exports = route
