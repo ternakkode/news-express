@@ -134,9 +134,9 @@
                             <div class="imgpost" style="background-image: url('<%= article.image %>');">
                             </div>
                             <p class="post">
-                                <%= article.content %>
+                                <%= article.spliced_content %>...
                             </p>
-                            <a href="/news/:<%= article.id %> " class="btn btn-primary">Read More</a>
+                            <a href="/news/<%= article.id %> " class="btn btn-primary">Read More</a>
                         </article>
                         <% }) %>
                 </div>

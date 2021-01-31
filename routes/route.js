@@ -1,8 +1,7 @@
 const express = require('express')
 const route = express.Router()
-const models = {
-    news: require('../models/news')
-}
+
+const models = { news: require('../models/news.model') }
 
 let totalViews = 0
 const logViewer = (req, res, next) => {
@@ -16,7 +15,7 @@ route.get('/', logViewer, (req, res) => {
 })
 
 route.get('/news/:newsId', logViewer, (req, res) => {
-    const news = models.news.fetchById(req.params.newsId) ?? {}
+    const news = models.news.fetchById(req.params.newsId) || {}
     res.render('news', { news: news })
 })
 
