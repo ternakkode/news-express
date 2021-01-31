@@ -1,80 +1,126 @@
-<%- include('header') %> 
+<%- include('header') %>
 <style>
-    .container {
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-   
-    .test {
-        width: 100px;
-        height: 50px;
-    }
-    .blog-post {
-        margin-bottom: 4rem;
-    }
-    .blog-post-title {
-        margin-bottom: .25rem;
-        font-size: 2.5rem;
-    }
-    .blog-post-meta {
-        margin-bottom: 1.25rem;
-        color: #727272;
-    }
-    p.post {
-        text-align: justify;
-    }
-    .imgpost {
-        height: 350px;
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+    .cover {
+        height: 32rem;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        margin-bottom: 2rem;
+    }
+    .title {
         margin-bottom: 1rem;
     }
-
+    .imgabout {
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+    .author {
+        margin: 0;
+    }
+    .about-text {
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
+    .mapouter {
+        position:relative;
+        text-align:right;
+        height:400px;
+        width:600px;
+    }
+    .gmap_canvas {
+        overflow:hidden;
+        background:none!important;
+        height:400px;
+        width:600px;
+    }
 </style>
-<!-- <div class="container">
-    <a href="" class="btn btn-info mb-3">Back to Home</a>
-    <div class="row">
-        <div class="col col-md-10 col-lg-10 col-sm">
-            <div class="card mb-3">
-                <img src="https://i.ytimg.com/vi/B0-WmC14yTo/maxresdefault.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  <a href="" class="btn btn-primary">Go To Author</a>
-                </div>
-              </div>
-             
-        </div>        
-    </div>
-</div> -->
-
-
-<!-- Punya wildan -->
-<div class="container">
-    <a href="" class="btn btn-info mb-3">Back to Home</a>
-    <div class="row">
-        <div class="col-md-8">
-            <h3 class="pb-4 mb-4 border-bottom">
-                About Author
-            </h3>
-            <article class="blog-post">
-                <h3 class="blog-post-title">Ikhwan Nur Hasyim</h3>
-                <div class="imgpost" style="background-image: url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');"></div>
-                <p class="post">Lahir : Yogayakarata</p>
-                <p class="post">Pendidikan : s1</p>
-                <p class="post">Istri : -</p>
-                <p class="post">Pekerjaan: Siswa Binar</p>
-                <p class="post">TTL: 6 Januri 1996</p>
-                <h5 class="blog-post-title">Bio</h5>
-                <p class="post">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus odio consequatur hic dignissimos. Hic, sapiente quisquam. Provident dicta exercitationem ex quia quos, nisi fugiat id inventore quasi reiciendis eaque? Ratione.</p>
-               
-            </article>
-        
+<body>
+    <div class="cover" style="background-image: url('https://images.unsplash.com/photo-1560523160-754a9e25c68f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1440&q=80');"></div>
+    <div class="container">
+        <div class="text-center">
+            <h3 class="title">About Us</h3>
+            <hr>
         </div>
-    
-</div>
-</div>
-
+        <p class="about-text">
+            Voluptatum et ut nihil dolore qui quos ducimus. Magni excepturi placeat tenetur laudantium et repudiandae esse itaque qui.
+            Reiciendis sequi autem sit porro earum minima in quod cumque. Eius aut quia autem consequatur inventore ut pariatur amet possimus.
+            Ut natus impedit sunt facilis non et laudantium reprehenderit facere. Voluptatem et culpa hic provident.
+            Ducimus cumque ad. Earum assumenda facere. Doloribus quas aliquid voluptatibus numquam modi quo rem numquam eligendi.
+            Excepturi dolorem officiis facilis. Quibusdam qui beatae dicta asperiores aut sed.
+            Odit sit in tenetur eum soluta autem qui. Qui assumenda harum. Esse officiis delectus occaecati laborum consequatur et architecto in.
+            In eius dolores officiis. Doloremque libero voluptatem veniam ut tempore enim ut. Illum labore quas voluptas omnis itaque.
+            Repellendus deleniti qui a beatae rerum. Itaque autem maiores quibusdam eveniet.
+            Doloremque qui porro perferendis ut facere asperiores. Quidem quod soluta odit rerum tenetur.
+            Voluptatem blanditiis quis. Est odit cumque sit sit cumque soluta et necessitatibus.
+        </p>
+        <div class="text-center">
+            <h3 class="title">Contributors</h3>
+            <hr>
+        </div>
+        <div class="row about-text">
+            <div class="col">
+                <div class="text-center">
+                    <img class="imgabout rounded-circle" src="https://avatars.githubusercontent.com/u/36605360?s=460&u=ca06111359d4059fdaa96e5dca3f70e5b8701b42&v=4" alt="">
+                    <p class="author">Ikhwan Nur Hasyim</p>
+                    <p class="author">FrontEnd</p>
+                    <a href="https://github.com/ikhwanwan07"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center">
+                    <img class="imgabout rounded-circle" src="https://avatars.githubusercontent.com/u/39244724?s=460&u=fd6ddfb54641a15283bd89fd4f212f24e4cdda6a&v=4" alt="">
+                    <p class="author">Muhammad Wildan Aizzaddin</p>
+                    <p class="author">FrontEnd</p>
+                    <a href="https://github.com/aizzaddin"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center">
+                    <img class="imgabout rounded-circle" src="https://avatars.githubusercontent.com/u/40066340?s=460&u=0adc492b0c00e9273cc9aa840d0c364137f3ad41&v=4" alt="">
+                    <p class="author">M. Firhan Azmi Nor</p>
+                    <p class="author">BackEnd</p>
+                    <a href="https://github.com/ternakkode"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center">
+                    <img class="imgabout rounded-circle" src="https://avatars.githubusercontent.com/u/53069422?s=460&v=4" alt="">
+                    <p class="author">Yanuar Aji Candra</p>
+                    <p class="author">BackEnd</p>
+                    <a href="https://github.com/yanuarac24"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center">
+                    <img class="imgabout rounded-circle" src="https://avatars.githubusercontent.com/u/77381775?s=60&v=4" alt="">
+                    <p class="author">Mikael Dimas</p>
+                    <p class="author">BackEnd</p>
+                    <a href="https://github.com/mikaeldimas"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <h3 class="title">Contact Us</h3>
+            <hr>
+        </div>
+        <div class="row about-text">
+            <div class="col">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=BCA%20KCU%20Yogyakarta&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <a href="https://yt2.org">mp3yt</a>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>Synergy Co-Working Space</h4>
+                <p class="author">Bank BCA KCU Yogyakarta</p>
+                <p class="author">Jl. Jend. Sudirman No.49-51, Terban, Kec. Gondokusuman,</p>
+                <p class="author">Kota Yogyakarta, Daerah Istimewa Yogyakarta 55223</p>
+            </div>
+        </div>
+    </div>
+</body>
 <%- include('footer') %> 
