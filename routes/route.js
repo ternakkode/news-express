@@ -5,27 +5,27 @@ const models = {
 }
 
 let totalViews = 0
-router.use(function (req, res, next) {
+const logViewer = (req, res, next) => {
     totalViews++
     next()
-})
+}
 
-/*
-    contoh penggunaan model news
-    1. route /checkAll untuk mengambil semua data
-    2. route /checkById/:newsId untuk mengambil berdasarkan id
-*/
-route.get('/checkAll', (req, res) => {
+route.get('/', logViewer, (req, res) => {
     const news = models.news.fetchAll()
-    res.json(news)
-})
-route.get('/checkById/:newsId', (req, res) => {
-    const news = models.news.fetchById(req.params.newsId) ?? {}
-    res.json(news)
+    res.render('home', { news: news, visitor: totalViews })
 })
 
-route.get('/news', (req, res) => {
-    res.render('news')
+route.get('/news/:newsId', logViewer, (req, res) => {
+    const news = models.news.fetchById(req.params.newsId) ?? {}
+    res.render('news', { news: news })
+})
+
+route.get('/about', logViewer, (req, res) => {
+    res.render('about')
+})
+
+route.get('/*', (req, res) => {
+    res.render('404')
 })
 
 module.exports = route
