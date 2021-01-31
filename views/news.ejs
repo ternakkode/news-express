@@ -1,77 +1,64 @@
-<%- include('header') %> 
-<style>
-    .container {
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-   
-    .test {
-        width: 100px;
-        height: 50px;
-    }
-    .blog-post {
-        margin-bottom: 4rem;
-    }
-    .blog-post-title {
-        margin-bottom: .25rem;
-        font-size: 2.5rem;
-    }
-    .blog-post-meta {
-        margin-bottom: 1.25rem;
-        color: #727272;
-    }
-    p.post {
-        text-align: justify;
-    }
-    .imgpost {
-        height: 250px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-bottom: 1rem;
-    }
+<%- include('header') %>
+    <style>
+        .container {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
 
-</style>
-<!-- <div class="container">
-    <a href="" class="btn btn-info mb-3">Back to Home</a>
-    <div class="row">
-        <div class="col col-md-10 col-lg-10 col-sm">
-            <div class="card mb-3">
-                <img src="https://i.ytimg.com/vi/B0-WmC14yTo/maxresdefault.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  <a href="" class="btn btn-primary">Go To Author</a>
-                </div>
-              </div>
-             
-        </div>        
-    </div>
-</div> -->
+        .test {
+            width: 100px;
+            height: 50px;
+        }
 
+        .blog-post {
+            margin-bottom: 4rem;
+        }
 
-<!-- Punya wildan -->
-<div class="container">
-    <a href="/" class="btn btn-info mb-3">Back to Home</a>
-    <div class="row">
-        <div class="col-md-8">
-            <h3 class="pb-4 mb-4 border-bottom">
-                Detail Berita
-            </h3>
-            <article class="blog-post">
-                <h3 class="blog-post-title">Omnis Est Nemo et a Laboriosam Assumenda</h3>
-                <p class="blog-post-meta">1 Ferbruari 2021</p>
-                <hr>
-                <div class="imgpost" style="background-image: url('https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1525&q=80');"></div>
-                <p class="post">Et ut nostrum eum. Quibusdam ratione illum sapiente. Culpa officiis nesciunt adipisci. Ea veritatis saepe totam in mollitia.</p>
-                <p class="post">Minima beatae dolorum. Ut nobis officiis rerum sequi. Ratione autem et qui ducimus minus rerum aspernatur. Alias quaerat quia non autem consequatur. Aut qui ea rerum exercitationem illo iusto consectetur laboriosam. Laborum non perferendis sed quis natus maiores sed laudantium.</p>
-                <a href="/about" class="btn btn-primary">Go To Author</a>
-            </article>
-        
+        .blog-post-title {
+            margin-bottom: .25rem;
+            font-size: 2.5rem;
+        }
+
+        .blog-post-meta {
+            margin-bottom: 1.25rem;
+            color: #727272;
+        }
+
+        p.post {
+            text-align: justify;
+        }
+
+        .imgpost {
+            height: 250px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <div class="container">
+        <a href="/" class="btn btn-info mb-3">Back to Home</a>
+        <div class="row">
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 border-bottom">
+                    Detail Berita
+                </h3>
+                <article class="blog-post">
+                    <h3 class="blog-post-title">
+                        <%= news.title %>
+                    </h3>
+                    <hr>
+                    <div class="imgpost" style="background-image: url('<%= news.image %>');">
+                    </div>
+                    <p class="post">
+                        <%= news.content %>
+                    </p>
+                    <a href="/about" class="btn btn-primary">Go To Author</a>
+                </article>
+
+            </div>
+
         </div>
-    
-</div>
-</div>
+    </div>
 
-<%- include('footer') %> 
+    <%- include('footer') %>
