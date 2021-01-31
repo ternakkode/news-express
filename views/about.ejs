@@ -1,0 +1,130 @@
+<%- include('header') %>
+<style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+    .cover {
+        height: 32rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 2rem;
+    }
+    .title {
+        margin-bottom: 1rem;
+    }
+    .imgabout {
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+    .author {
+        margin: 0;
+    }
+    .about-text {
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
+    .mapouter {
+        position:relative;
+        text-align:right;
+        height:400px;
+        width:600px;
+    }
+    .gmap_canvas {
+        overflow:hidden;
+        background:none!important;
+        height:400px;
+        width:600px;
+    }
+</style>
+<body>
+    <div class="cover" style="background-image: url('https://images.unsplash.com/photo-1560523160-754a9e25c68f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1440&q=80');"></div>
+    <div class="container">
+        <div class="text-center">
+            <h3 class="title">About Us</h3>
+            <hr>
+        </div>
+        <p class="about-text">
+            BBC World News is the BBC's commercially funded international 24-hour news and information channel,
+            broadcast in English in more than 200 countries and territories across the globe.
+            Its estimated weekly audience of 84 million makes it the BBC's biggest television service.           
+            Available in more than 440m homes, 3m hotel rooms, on 165 cruise ships, 30 commercial vessels,
+            13 commercial airlines and 36 mobile phone networks - BBC World News broadcasts a diverse mix of authoritative international news,
+            sport, weather, business, current affairs and documentary programming.
+            BBC World News is at the heart of the BBC's commitment to global broadcasting.
+            As an integral member of BBC Global News, sitting alongside BBC World Service radio,
+            BBC World News delivers impartial, in-depth analysis of breaking news, as well as looking at the stories behind the news - not
+            just what is happening, but why.         
+            BBC World News is owned and operated by BBC Global News Ltd, a member of the BBC's
+            commercial group of companies and is funded by subscription and advertising revenues.
+            The registered address of BBC Global News Ltd is Broadcasting House, Portland Place,
+            London, W1A 1AA. GNL's registered number is 4514407.
+        </p>
+        <div class="text-center">
+            <h3 class="title">Contributors</h3>
+            <hr>
+        </div>
+        <div class="row about-text">
+            <div class="col">
+                <div class="text-center">
+                    <img class="imgabout rounded-circle" src="https://avatars.githubusercontent.com/u/36605360?s=460&u=ca06111359d4059fdaa96e5dca3f70e5b8701b42&v=4" alt="">
+                    <p class="author">Ikhwan Nur Hasyim</p>
+                    <p class="author">FrontEnd</p>
+                    <a href="https://github.com/ikhwanwan07"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center">
+                    <img class="imgabout rounded-circle" src="https://avatars.githubusercontent.com/u/39244724?s=460&u=fd6ddfb54641a15283bd89fd4f212f24e4cdda6a&v=4" alt="">
+                    <p class="author">Wildan Aizzaddin</p>
+                    <p class="author">FrontEnd</p>
+                    <a href="https://github.com/aizzaddin"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center">
+                    <img class="imgabout rounded-circle" src="https://avatars.githubusercontent.com/u/40066340?s=460&u=0adc492b0c00e9273cc9aa840d0c364137f3ad41&v=4" alt="">
+                    <p class="author">M. Firhan Azmi Nor</p>
+                    <p class="author">BackEnd</p>
+                    <a href="https://github.com/ternakkode"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center">
+                    <img class="imgabout rounded-circle" src="https://avatars.githubusercontent.com/u/53069422?s=460&v=4" alt="">
+                    <p class="author">Yanuar Aji Candra</p>
+                    <p class="author">BackEnd</p>
+                    <a href="https://github.com/yanuarac24"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center">
+                    <img class="imgabout rounded-circle" src="https://avatars.githubusercontent.com/u/39244724?s=460&u=fd6ddfb54641a15283bd89fd4f212f24e4cdda6a&v=4" alt="">
+                    <p class="author">Mikael Dimas</p>
+                    <p class="author">BackEnd</p>
+                    <a href="https://github.com/yanuarac24"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <h3 class="title">Contact Us</h3>
+            <hr>
+        </div>
+        <div class="row about-text">
+            <div class="col">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=BCA%20KCU%20Yogyakarta&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <a href="https://yt2.org">mp3yt</a>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>Synergy Co-Working Space</h4>
+                <p class="author">Bank BCA KCU Yogyakarta</p>
+                <p class="author">Jl. Jend. Sudirman No.49-51, Terban, Kec. Gondokusuman,</p>
+                <p class="author">Kota Yogyakarta, Daerah Istimewa Yogyakarta 55223</p>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include('footer') %> 
