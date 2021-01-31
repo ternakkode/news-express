@@ -134,7 +134,7 @@
                             <div class="imgpost" style="background-image: url('<%= article.image %>');">
                             </div>
                             <p class="post">
-                                <%= article.content %>
+                                <%= article.spliced_content %>...
                             </p>
                             <a href="/news/<%= article.id %> " class="btn btn-primary">Read More</a>
                         </article>
@@ -144,9 +144,7 @@
                 <div class="col-md-4">
                     <div class="p-4 mb-3 bg-primary rounded">
                         <h4 style="color: white;">Jumlah Pengunjung</h4>
-                        <p style="color: white;">
-                            <%= visitor %>
-                        </p>
+                        <p style="color: white;"><%= visitor %> </p>
                     </div>
                 </div>
             </div>

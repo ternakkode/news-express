@@ -1,64 +1,64 @@
 <%- include('header') %>
-    <style>
-        .container {
-            margin-top: 100px;
-            margin-bottom: 100px;
-        }
+<style>
+    .container {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
 
-        .test {
-            width: 100px;
-            height: 50px;
-        }
+    .test {
+        width: 100px;
+        height: 50px;
+    }
 
-        .blog-post {
-            margin-bottom: 4rem;
-        }
+    .blog-post {
+        margin-bottom: 4rem;
+    }
 
-        .blog-post-title {
-            margin-bottom: .25rem;
-            font-size: 2.5rem;
-        }
+    .blog-post-title {
+        margin-bottom: .25rem;
+        font-size: 2.5rem;
+    }
 
-        .blog-post-meta {
-            margin-bottom: 1.25rem;
-            color: #727272;
-        }
+    .blog-post-meta {
+        margin-bottom: 1.25rem;
+        color: #727272;
+    }
 
-        p.post {
-            text-align: justify;
-        }
+    p.post {
+        text-align: justify;
+    }
 
-        .imgpost {
-            height: 250px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin-bottom: 1rem;
-        }
-    </style>
-    <div class="container">
-        <a href="/" class="btn btn-info mb-3">Back to Home</a>
-        <div class="row">
-            <div class="col-md-8">
-                <h3 class="pb-4 mb-4 border-bottom">
-                    Detail Berita
+    .imgpost {
+        height: 250px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 1rem;
+    }
+
+</style>
+<div class="container">
+    <a href="/" class="btn btn-info mb-3">Back to Home</a>
+    <div class="row">
+        <div class="col-md-8">
+            <h3 class="pb-4 mb-4 border-bottom">
+                Detail Berita
+            </h3>
+            <article class="blog-post">
+                <h3 class="blog-post-title">
+                    <%= news.title %>
                 </h3>
-                <article class="blog-post">
-                    <h3 class="blog-post-title">
-                        <%= news.title %>
-                    </h3>
-                    <hr>
-                    <div class="imgpost" style="background-image: url('<%= news.image %>');">
-                    </div>
-                    <p class="post">
-                        <%= news.content %>
-                    </p>
-                    <a href="/about" class="btn btn-primary">Go To Author</a>
-                </article>
-
-            </div>
-
+                <hr>
+                <div class="imgpost" style="background-image: url('<%= news.image %>');">
+                </div>
+                <% news.content.forEach(function(content){ %>
+                <p class="post">
+                    <%= content %>
+                </p>
+                <% }) %>
+                <a href="/about" class="btn btn-primary">Go To Author</a>
+            </article>
         </div>
     </div>
-
-    <%- include('footer') %>
+</div>
+<%- include('footer') %>
