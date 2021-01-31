@@ -14,9 +14,13 @@ route.get('/', logViewer, (req, res) => {
     res.render('home', { news: news, visitor: totalViews })
 })
 
-route.get('/news/:newsId', logViewer, (req, res) => {
-    const news = models.news.fetchById(req.params.newsId) || {}
-    res.render('news', { news: news })
+route.get('/news/:slug', logViewer, (req, res) => {
+    const news = models.news.fetchBySlug(req.params.slug)
+    if (news) {
+        res.render('news', { news: news })
+    } else {
+        res.render('404')
+    }
 })
 
 route.get('/about', logViewer, (req, res) => {
